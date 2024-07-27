@@ -1,0 +1,500 @@
+{
+	"info": {
+		"_postman_id": "b9a13450-3978-4239-b467-9e170bdafb28",
+		"name": "Финальное задание",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30912039"
+	},
+	"item": [
+		{
+			"name": "Добавление товара",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json, text/javascript, */*; q=0.01"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "cookie",
+						"value": "PHPSESSID=UYR2EfMovJFDKd56MBPjJeru0wbN7KNZ; BX_USER_ID=843a6c62ad3b3238c0402f0fc53f0604; _ym_uid=1721385246425547962; _ym_d=1721385246; _ym_isad=1; _ym_visorc=w; basketor=810568"
+					},
+					{
+						"key": "origin",
+						"value": "https://www.sibdar-spb.ru"
+					},
+					{
+						"key": "priority",
+						"value": "u=1, i"
+					},
+					{
+						"key": "referer",
+						"value": "https://www.sibdar-spb.ru/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "x-requested-with",
+						"value": "XMLHttpRequest"
+					},
+					{
+						"key": "BX_USER_ID",
+						"value": "843a6c62ad3b3238c0402f0fc53f0604",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"idCookie\":\"810568\",\"idProd\":\"204\",\"type\":\"add\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.sibdar-spb.ru/ajax/basketOrder.php",
+					"protocol": "https",
+					"host": [
+						"www",
+						"sibdar-spb",
+						"ru"
+					],
+					"path": [
+						"ajax",
+						"basketOrder.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Увеличение количества товара",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"2\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json, text/javascript, */*; q=0.01"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "cookie",
+						"value": "PHPSESSID=UYR2EfMovJFDKd56MBPjJeru0wbN7KNZ; BX_USER_ID=843a6c62ad3b3238c0402f0fc53f0604; _ym_uid=1721385246425547962; _ym_d=1721385246; _ym_isad=1; _ym_visorc=w; basketor=810568"
+					},
+					{
+						"key": "origin",
+						"value": "https://www.sibdar-spb.ru"
+					},
+					{
+						"key": "priority",
+						"value": "u=1, i"
+					},
+					{
+						"key": "referer",
+						"value": "https://www.sibdar-spb.ru/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "x-requested-with",
+						"value": "XMLHttpRequest"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "data=%7B%22idCookie%22%3A%22810568%22%2C%22idProd%22%3A180%2C%22type%22%3A%22plus%22%7D",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}",
+					"host": [
+						"{{baseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Уменьшение количества товара",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"1\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json, text/javascript, */*; q=0.01"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "cookie",
+						"value": "PHPSESSID=UYR2EfMovJFDKd56MBPjJeru0wbN7KNZ; BX_USER_ID=843a6c62ad3b3238c0402f0fc53f0604; _ym_uid=1721385246425547962; _ym_d=1721385246; _ym_isad=1; basketor=810568; _ym_visorc=w"
+					},
+					{
+						"key": "origin",
+						"value": "https://www.sibdar-spb.ru"
+					},
+					{
+						"key": "priority",
+						"value": "u=1, i"
+					},
+					{
+						"key": "referer",
+						"value": "https://www.sibdar-spb.ru/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "x-requested-with",
+						"value": "XMLHttpRequest"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "data=%7B%22idCookie%22%3A%22810568%22%2C%22idProd%22%3A180%2C%22type%22%3A%22minus%22%7D",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}",
+					"host": [
+						"{{baseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отправка заказа",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json, text/javascript, */*; q=0.01"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "cookie",
+						"value": "PHPSESSID=UYR2EfMovJFDKd56MBPjJeru0wbN7KNZ; BX_USER_ID=843a6c62ad3b3238c0402f0fc53f0604; _ym_uid=1721385246425547962; _ym_d=1721385246; _ym_isad=1; basketor=810568; _ym_visorc=w"
+					},
+					{
+						"key": "origin",
+						"value": "https://www.sibdar-spb.ru"
+					},
+					{
+						"key": "priority",
+						"value": "u=1, i"
+					},
+					{
+						"key": "referer",
+						"value": "https://www.sibdar-spb.ru/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "x-requested-with",
+						"value": "XMLHttpRequest"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "data=%7B%22all%22%3A%7B%22recaptcha_response%22%3A%2203AFcWeA4v2cWs1tZHATrSJMXZm8v2tRAosWfrHyR3ltQdTtbqUWAwgi4YtqgfIWxba1TjtnzmTUujrIGA-KOKAEuAc1PCMuP4iXWKkyYrO0nSMprr-6JYYNiVxT373Qd1yXOxqBQJWo9InEznR_I3b0tXV0iGQLE4EkBtK6fY_lEkn-vwHHt2fAjdjGL7LtTq1HtpFrERdFnlz9GRkDse1SAbKKSWOGOGLlU7wVMfBo3PuX7kM5ONw9dErh5sQ0fyoU1CIGbMFUkl9tq59DGVueAiiOMSpQoCIicugs0jHC23elF9l5f0hQudLm3D9abgE5kZk7nTqMu0OpUG3gL19ml9qCNpEM8Y19TOSoPVB7tzUWY4vlQT-cGAgPqDh0ik_w2zn3IoVUl4Shqu2ZYFEBpYtvMc6YECi5AhbNzDBiCvQ10hbvm7XhH_vEveY3slk7czwmXUyTYUQ4CcunkBX3rovQcWz70yotPhYePVDXiFPlXaYAlZeUCCwrTNtewHc4GULjcvlH-ca1Cs1aeWlkcf5Oyn1qeQG8zWKITqq_FDnI8UqIu14TD3rNlQykZgUK6z_O032KStSDsBMr7WaxbFOGLUMB78BJkciNOnMO4SjcFS2DbfBSMEFUUr9DYjvUf5ERR3vKg89mFrs2iCbKFEU5a1Y1ckULCUPfmyjPW6Oj2zgJASRwcB9F9R6BYDLgohhO55WaXL5HFAN_3C0MRq2KbiSPH0m9aTZJBF8yNQbT3Kn17Kg5vN2KiHAUzQ_ID7e6JrafLgjFbJ2fVuBuVNXy5pgroUK9qYzWWQutYpn3Wzftg_5dSnOWwbmaJQMP-wa1qbWYtKvQi8xnJQqsIYzWmYHwMb3gIwiODV5dI2vGOsdbgrUyPPUNtwJkgSW5If7mpl9btdRBwDeS22rU1iuf001-qGyEDNp0a92UluE4HQe5vLsP-7zyzrCw3R6RVNyDqFHuXsXHcytMwGVh8ULpJdWwdkbngc1Hr8GHeEG2vaLdJZ3boaN79EGcnauP2_oVloRqumauY36HKNC9BCtTy67jHphR6YC8qfcl9882JEGLTmDx0zRQrsLD2eiAD04zjxEZKM8IqLHXYFM9ONxw_29FmcVmU3xDDhznlXinl0WrXQhVAMrJv9UxLX7LobI9CaGdC60xorJ_REoj0dY8yQZIkDhBZ1TN9Zsi_CXs4gtGWIJw0ELSIP9-GVOmyyPDlIKLdFuo9rpY7o88X5yC07cYvozrT7-DDCnjXsMxH9IUJV93R-_fRHs4sJElYNVYI0ToIcXZXqm6gEXbKZbXxaidpCN9yEtFyZSEoRNMx5Mb9Yrvm4Njj25kK1fcmnjUpyqF0Q5S8rZSW0O_GUse-uKBUTpNtE8WRBaTOeZch7HsdAWhCJa0lUJM_xr_AOcHfDtjPgxcW4GApMmAX2_vg641YJmvRmvL8F_UN8L9UU8coC4Pra0L6Xkkggl9uFAoXnjA9FkA9_DJ-u6TZZVRvDFO3RuTvfcoABoygdVkcuSTjWAe0JgzYTILBIkVAXZiyIAIGp-1mTVy1qwVqRI0Fd_80UiibiBFP6IoFZlJkjDJnKAW9jgBZWb1J_lRd3oX3ZFMZ3jQaD_rnjNGkm_vOQpicQX4WsPV5yAWxj25kRl3ZoepWHCRyg2r0ej8Jmhox-PeLVLYfh2ItTF6kueH-sNBQjONfm8cx4EREUuJ3Z4shO-858i2EN8xT0EzHMDE-gu4g5EtQKc28vsmplztneFkr1OrCZXglNnfubP16ziU7pDgSwRYivi_L95qdABo_9aYEocHKhCQFICL5qb2HagKXRM6ooLGTWqpEU7BvkhZn0egC9VPqeyfdzfonuWtjabvcdibYtNt1F54yLWAHUls80XdVDFgfp0co2fhihQuMwoutSF-pc0ZFothaRP6oJN-1oStKzshSLyA-csc_1e3smE8UpecKkjF62ID6bfFt43R4JyEEGjbZRF2cIniPtd0ul9nsznvQZsiGAvAXQXvLWo75U66BOPPp_iySH-C0wvWFww1Yj7vfdTpL5lxrAjSyLG5qnDuR6xEyWRU72GOI5Qaipd7Q0ohgXbK_keWTyWpGyKo7pCP3roCmVYOQRPrILVQbJxJBxzi4y3fQ8C7YnSIaL4oO4l_dTXSHRmJqVP8IAw7kC29wvR35c0oPcGOQ2jGhX3S0eOpCKexCMZy_tMw%22%2C%22project_name%22%3A%22%D0%94%D0%B8%D0%BA%D0%B8%D0%B9+%D0%A1%D0%B1%D0%BE%D1%80%22%2C%22admin_email%22%3A%22ooo_ecotaiga%40mail.ru%22%2C%22form_subject%22%3A%22%D0%92%D1%8B%D0%B1%D1%80%D0%B0%D0%BD%D1%8B+%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D1%8B+%D0%BD%D0%B0+%D1%81%D0%B0%D0%B9%D1%82%D0%B5%22%2C%22colprod%22%3A%223+%D1%88%D1%82%22%2C%22%D0%98%D0%BC%D1%8F%22%3A%22%D0%94%D0%B0%D1%80%D1%8C%D1%8F%22%2C%22%D0%A2%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%22%3A%22%2B7+(212)+121-2111%22%7D%2C%22inp%22%3A%22%3Cp%3E%D0%A2%D0%BE%D0%B2%D0%B0%D1%80%3A+%D0%93%D1%80%D0%B8%D0%B1%D0%BD%D0%B0%D1%8F+%D0%BA%D1%80%D0%BE%D1%88%D0%BA%D0%B0+%D0%A6%D0%B5%D0%BD%D0%B0%3A+800%D1%80%D1%83%D0%B1+3%D1%88%D1%82+%D0%A1%D1%83%D0%BC%D0%BC%D0%B0%3A+2400%D1%80%D1%83%D0%B1%3C%2Fp%3E%3Cp%3E%D0%9E%D0%B1%D1%89%D0%B0%D1%8F+%D1%81%D1%83%D0%BC%D0%BC%D0%B0%3A+2400%D1%80%D1%83%D0%B1%3C%2Fp%3E%22%7D",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}",
+					"host": [
+						"{{baseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление товара",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"0\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/javascript, */*; q=0.01"
+					},
+					{
+						"key": "Referer",
+						"value": "https://www.sibdar-spb.ru/"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "data=%7B%22idCookie%22%3A%22810568%22%2C%22idProd%22%3A180%2C%22type%22%3A%22delete%22%7D",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}",
+					"host": [
+						"{{baseURL}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "https://www.sibdar-spb.ru/ajax/basketOrder.php"
+		}
+	]
+}
